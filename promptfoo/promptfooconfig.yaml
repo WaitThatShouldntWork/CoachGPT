@@ -2,39 +2,27 @@
 description: "My eval"
 
 prompts:
-  - "Write a tweet about {{topic}}"
+  - "What is the capital of {{topic}}"
   
 
 providers:
-  # - "openai:gpt-4o-mini"
-  # - "openai:gpt-4o"
-  # - "anthropic:messages:claude-3-5-sonnet-20240620"
-  # - "anthropic:messages:claude-3-opus-20240307"
-  # - "ollama:chat:llama3"
-  - "ollama:chat:mixtral:8x22b"
+  - "openai:gpt-4o-mini"
+  - "openai:gpt-4o"
+  - name: custom-mistral-enjoyment
+    type: custom
+    configuration: python C:\Dev\InferGPT\backend\src\api\app.py
+
   
-
 tests:
+  - label: Country capitals
   - vars:
-      topic: bananas
-
-  - vars:
-      topic: avocado toast
+      topic: France
     assert:
-      # For more information on assertions, see https://promptfoo.dev/docs/configuration/expected-outputs
-
-      # Make sure output contains the word "avocado"
       - type: icontains
-        value: avocado
+        value: Paris
 
-      # Prefer shorter outputs
-      - type: javascript
-        value: 1 / (output.length + 1)
-
-  # - vars:
-  #     topic: new york city
-  #   assert:
-  #     # For more information on model-graded evals, see https://promptfoo.dev/docs/configuration/expected-outputs/model-graded
-  #     - type: llm-rubric
-  #       value: ensure that the output is funny
-
+  - vars:
+      topic: Spain
+    assert:
+      - type: icontains
+        value: Madrid
