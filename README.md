@@ -1,6 +1,6 @@
 # Infer: your local personalised AI agent
 
-InferGPT's mission is to be an AI that knows you better than your best friend. A system that personalises to who you are and what you care about. We want to build something that can:
+Infer's mission is to be an AI that knows you better than your best friend. A system that personalises to who you are and what you care about. We want to build something that can:
 
 🔗 Ingest data about you from various sources (with your permission of course)  
 💡 Have deep and personal conversations without having to answer lots of questions - it will already infer your needs, make personalised recommendations and remember all your conversations.  
