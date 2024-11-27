@@ -1,4 +1,4 @@
-# InferGPT: your local personalised AI agent
+# Infer: your local personalised AI agent
 
 InferGPT's mission is to be an AI that knows you better than your best friend. A system that personalises to who you are and what you care about. We want to build something that can:
 
